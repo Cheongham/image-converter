@@ -1,0 +1,23 @@
+{
+  "name": "vasnuri-image-converter",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "브라우저에서 동작하는 VASNURI GIF JPG PNG WEBP 이미지 변환기",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node --check src/app.js && node --check src/worker.js",
+    "test": "node --test tests/*.test.mjs",
+    "preview": "node scripts/serve.mjs",
+    "test:browser-build": "node scripts/build-tests.mjs",
+    "package": "npm run build && node scripts/package.mjs"
+  },
+  "dependencies": {
+    "@jsquash/webp": "^1.5.0",
+    "fflate": "^0.8.3",
+    "gifenc": "^1.0.3"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}

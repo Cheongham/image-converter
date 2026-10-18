@@ -1,0 +1,8 @@
+node_modules/
+tests/browser-harness.js
+tests/downloaded-*.zip
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example

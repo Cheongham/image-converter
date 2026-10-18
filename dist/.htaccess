@@ -1,0 +1,11 @@
+# This file belongs only in the image-converter subdirectory.
+DirectoryIndex index.html
+<IfModule mod_mime.c>
+  AddType application/wasm .wasm
+  AddType application/javascript .js
+</IfModule>
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|js|css|wasm)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
